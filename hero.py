@@ -1,7 +1,11 @@
+from ability import Ability
+from armor import Armor
 import random
 
 class Hero:
     def __init__(self, name, starting_health=100):
+        self.abilities = list()
+        self.armors = list()
         self.name = name
         self.starting_health = starting_health
         self.current_health = starting_health
@@ -18,7 +22,12 @@ class Hero:
 
         print(f"{winner.name} defeats {opponent.name if winner == self else self.name}!")
 
+    def add_ability(self, ability):
+        self.abilities.append(ability)
+    
+
 if __name__ == "__main__":
-    hero1 = Hero("Wonder Woman", 300)
-    hero2 = Hero("Dumbledore", 250)
-    hero1.fight(hero2)
+  ability = Ability("Great Debugging", 50)
+  hero = Hero("Grace Hopper", 200)
+  hero.add_ability(ability)
+  print(hero.abilities)
