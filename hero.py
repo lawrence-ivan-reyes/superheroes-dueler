@@ -1,6 +1,5 @@
 from ability import Ability
 from armor import Armor
-import random
 
 class Hero:
     def __init__(self, name, starting_health=100):
