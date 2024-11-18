@@ -20,11 +20,9 @@ Superhero Dueler is an interactive CLI game where teams of superheroes battle it
 - **SSH**: `git clone git@github.com:lawrence-ivan-reyes/superheroes-dueler.git`  
 - **GitHub CLI**: `gh repo clone lawrence-ivan-reyes/superheroes-dueler` 
 
-2. **Install Required Packages:** `pip3 install -r requirements.txt`
+2. **Run the Program:** `python3 arena.py`
 
-3. **Run the Program:** `python3 arena.py`
-
-4. **Game Controls:** Simply follow on-screen prompts to create teams and control the game flow.
+3. **Game Controls:** Simply follow on-screen prompts to create teams and control the game flow.
 
 ---
 

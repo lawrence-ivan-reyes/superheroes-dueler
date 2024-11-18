@@ -44,14 +44,14 @@ class Arena:
     def build_team_one(self):
         self.team_one = Team(input("Enter Team One name: "))
         num_of_team_members = int(input("How many members would you like on Team One?\n"))
-        for _ in range(num_of_team_members):
+        for i in range(num_of_team_members):
             hero = self.create_hero()
             self.team_one.add_hero(hero)
 
     def build_team_two(self):
         self.team_two = Team(input("Enter Team Two name: "))
         num_of_team_members = int(input("How many members would you like on Team Two?\n"))
-        for _ in range(num_of_team_members):
+        for i in range(num_of_team_members):
             hero = self.create_hero()
             self.team_two.add_hero(hero)
 
