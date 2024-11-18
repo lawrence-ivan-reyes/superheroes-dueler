@@ -178,3 +178,5 @@ pyrightconfig.json
 dog.py
 my_dogs.py
 venv/
+animal.py
+requirements.txt

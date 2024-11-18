@@ -100,3 +100,52 @@ if __name__ == "__main__":
         else:
             arena.team_one.revive_heroes()
             arena.team_two.revive_heroes()
+
+    def edit_teams(self):
+        while True:
+            print("\nEditing Options:")
+            print("[1] Rebuild Team One")
+            print("[2] Rebuild Team Two")
+            print("[3] Done Editing\n")
+            choice = input("Choose an option: ")
+
+            if choice == "1":
+                self.team_one = self.build_team(input("Enter new Team One name: "))
+            elif choice == "2":
+                self.team_two = self.build_team(input("Enter new Team Two name: "))
+            elif choice == "3":
+                break
+            else:
+                print("Invalid choice, please choose again.")
+
+if __name__ == "__main__":
+    game_is_running = True
+
+    arena = Arena()
+
+    while game_is_running:
+        print("\nMain Menu:")
+        print("[1] Build Teams")
+        print("[2] Edit Teams")
+        print("[3] Start Battle")
+        print("[4] Exit\n")
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            arena.build_teams()
+        elif choice == "2":
+            arena.edit_teams()
+        elif choice == "3":
+            arena.team_battle()
+            arena.show_stats()
+            play_again = input("Play Again? Y or N: ")
+
+            if play_again.lower() == "n":
+                game_is_running = False
+            else:
+                arena.team_one.revive_heroes()
+                arena.team_two.revive_heroes()
+        elif choice == "4":
+            game_is_running = False
+        else:
+            print("Invalid choice, please choose again.")
