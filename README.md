@@ -1,10 +1,10 @@
-# Superheroes Dueler 🦸‍♂️🦸‍♀️
+# Superhero Dueler 🦸🏻‍♂️
 ### Ivan Reyes | ACS 1111: Object Oriented Programming | Dani Roxberry
 
 ---
 
 ### ℹ️ Program Description
-Superheroes Dueler is an interactive CLI game where teams of superheroes battle it out, focusing on object-oriented programming. Build and customize teams with unique abilities, weapons, and armor. 
+Superhero Dueler is an interactive CLI game where teams of superheroes battle it out, focusing on object-oriented programming. Build and customize teams with unique abilities, weapons, and armor. 
 
 **Key Features:**
 - **Team Building**: Create and customize teams with heroes having unique abilities, weapons, and armor.
