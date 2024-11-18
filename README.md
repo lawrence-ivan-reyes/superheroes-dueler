@@ -4,7 +4,7 @@
 ---
 
 ### ℹ️ Program Description
-Superhero Dueler is an interactive CLI game where teams of superheroes battle it out, focusing on object-oriented programming. Build and customize teams with unique abilities, weapons, and armor. 
+Superhero Dueler is an interactive CLI game where teams of superheroes battle it out. Customize teams with unique abilities, weapons, and armor. This program highlights the principles of object-oriented programming.
 
 **Key Features:**
 - **Team Building**: Create and customize teams with heroes having unique abilities, weapons, and armor.
@@ -37,4 +37,4 @@ Superhero Dueler is an interactive CLI game where teams of superheroes battle it
 **Supporting Files**
 - `ability.py`: Contains the `Ability` class for hero abilities.
 - `armor.py`: Contains the `Armor` class for hero armor.
-- `weapon.py`: Contains the `Weapon` class, inherited from Ability, for hero weapons.
+- `weapon.py`: Contains the `Weapon` class, inherited from `Ability`, for hero weapons.
