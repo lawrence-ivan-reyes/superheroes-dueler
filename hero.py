@@ -10,31 +10,29 @@ class Hero:
         self.name = name
         self.starting_health = starting_health
         self.current_health = starting_health
+        self.deaths = 0
+        self.kills = 0
 
     def fight(self, opponent):
         if not self.abilities and not opponent.abilities:
             print("Draw") 
-
         else:
             while self.is_alive() and opponent.is_alive():
-
-                # stretch: calc damage first
                 hero_attack_damage = self.attack()
                 opponent_attack_damage = opponent.attack()
-
-                # then apply attacks after
                 self.take_damage(opponent_attack_damage)
                 opponent.take_damage(hero_attack_damage)
 
                 if self.is_alive() and not opponent.is_alive():
                     print(f"{self.name} won!")
+                    self.add_kill(1)
+                    opponent.add_death(1)
                 elif not self.is_alive() and opponent.is_alive():
                     print(f"{opponent.name} won!")
+                    opponent.add_kill(1)
+                    self.add_death(1)
                 elif not self.is_alive() and not opponent.is_alive():
                     print("Draw!")
-                else:
-                    # neither side has lost,so continue the loop
-                    continue
 
     def add_ability(self, ability):
         self.abilities.append(ability)
@@ -68,6 +66,12 @@ class Hero:
     
     def add_weapon(self, weapon):
         self.abilities.append(weapon)
+
+    def add_kill(self, num_kills):
+        self.kills += num_kills
+
+    def add_death(self, num_deaths):
+        self.deaths += num_deaths
 
 if __name__ == "__main__":
     hero = Hero("Wonder Woman")
